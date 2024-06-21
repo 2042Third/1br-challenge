@@ -1,6 +1,6 @@
 # Single Threaded One Billion Rows Challenge 
 
-## Reason to Not User Multi-threading
+## Reason to Not Use Multi-threading
 This is only a 12 Gb file, and the calculation is extremely simple (two comparisons and one addition each iteration). 
 Thus, the bottleneck is going to be the IO operation of reading the file. In fact, 
 using multi-threading will make it slower due to the added overhead of context switching.
