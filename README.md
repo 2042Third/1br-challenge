@@ -1,5 +1,11 @@
 # Single Threaded One Billion Rows Challenge 
 
+
+## Results
+| Hardware | Time (seconds) |
+|----------|----------------|
+| Apple M2 | 0.55           |
+
 ## Reason to Not Use Multi-threading
 This is only a 12 Gb file, and the calculation is extremely simple (two comparisons and one addition each iteration). 
 Thus, the bottleneck is going to be the IO operation of reading the file. In fact, 
@@ -15,7 +21,3 @@ I used custom comparator and equality checker with `char*`.
 - The map or specifically `std::unordered_map` should be used since the challenge said there will be at most 10,000 cities. 
 Using `std::unordered_map` allows us to call `std::unordered_map::reserve(int)` to make inserts O(1) instead of O(log n).
 
-## Results
-| Hardware | Time (seconds) |
-|----------|----------------|
-| Apple M2 | 0.55           |
