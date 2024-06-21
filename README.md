@@ -1,5 +1,5 @@
-# Single Threaded One Billion Rows Challenge 
-
+# Single Threaded One Billion Rows Challenge
+This is a solution to the [one billion rows challenge](https://github.com/gunnarmorling/1brc) using a single thread in C++. 
 
 ## Results
 | Hardware | Time (seconds) |
