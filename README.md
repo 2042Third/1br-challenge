@@ -14,7 +14,7 @@ using multi-threading will make it slower due to the added overhead of context s
 ## Methods
 - From my experience, reading binary files (both signle and multi-threaded) using memory mapped files is the best, especially when the file is large.
   - I used my encryption memory mapping class to read the file.
-- The most of a IO heavy operation like reading a file is from actually accessing the memory mapped pointer to the file. Thus, it is best to minimize 
+- The cost of a IO heavy operation like reading a file is mostly from actually accessing the memory mapped pointer to the file. Thus, it is best to minimize 
     the number of times the pointer is accessed. In this case, each character only need to be accessed once from the memory mapped pointer.
 - The map that keeps track of the statistics of each city can just use `std::string` since it didn't give me much of a performance improvement when 
 I used custom comparator and equality checker with `char*`. 
